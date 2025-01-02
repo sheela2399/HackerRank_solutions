@@ -116,12 +116,120 @@ function divisibleBy10(){
  }
  var str = "Shaily";
  console.log(countVowels(str));
-// 
- 
-   
+
+//14.  calculate and print the sum of the elements in an array,
+  function aVeryBigSum(ar) {    
+let sum= 0;
+for ( let i=0; i<ar.length; i++){
+   sum += parseInt(ar[i].toString().substring(0));
+}
+return sum;
+}
+
+
+// 15. calculate the absolute difference between the sums of its diagonals.
+function diagonalDifference(matrix) {
+    // Write your code here
+       var n = matrix.length;
+    var diag1 = 0;
+    var diag2 = 0;
+    for(var i=0; i<n; i++){
+        for(var j=0; j<n; j++){
+            // an element from the main diagonal
+            if(i === j) { 
+                diag1 += matrix[i][j];
+            }
+            // an element from the counterdiagonal
+            if(i + j === n - 1){
+                diag2 += matrix[i][j];
+            }
+        }
+    }
+    return Math.abs(diag1 - diag2);
+}
+
+
+
+//  16.
+function birthdayCakeCandles(candles){
+    // Write your code here
+    let maxheight = Math.max(...candles);
+    let count = 0;
+    for(let i=0;i<candles.length; i++){
+        if(candles[i] == maxheight){
+            count ++;
+          }
+        }
+        console.log(count)
+return count;
+}
+birthdayCakeCandles([4,4,2,1])
   
+function birthdayCakeCandles(candles) {
+    // Write your code here
+    let maxheight = Math.max(...candles);
+   let count = candles.filter(x => x === maxheight).length
+return count;
+}
+birthdayCakeCandles([4,4,2,1])
+
+// 17. 
+function getTwentyFourHourTime(amPmString) { 
+    var d = new Date("1/1/2013 " + amPmString); 
+    return d.getHours() + ':' + d.getMinutes(); 
+}
+
+// 18
+var positiveNumber = 0;
+var negativeNumber = 0;
+var zeroNumber = 0;
+function plusMinus(arr) {
+    // Write your code here
+    for (var i=0; i<arr.length; i++){
+        // console.log(arr[i])
+        if(arr[i]>0){
+            // console.log("Positive")
+            positiveNumber++
+        }
+        else if (arr[i]<0){
+            // console.log("Negative")
+            negativeNumber++
+        }else{
+            // console.log("Zero")
+            zeroNumber++
+        }
+    }
+    console.log(positiveNumber/arr.length);
+    console.log(negativeNumber/arr.length);
+    console.log(zeroNumber/arr.length); 
+}
+ 
+// 19. staircase from right to left
+function staircase(n) {
+    for (let i = 1; i <= n; i++) {
+        let spaces = " ".repeat(n-i);
+        let hashes = "#".repeat(i);
+        console.log(spaces + hashes);
+    }    
+}
 
 
+// 20. min Max sum
+function minMaxSum(arr){
+ var clone1= arr.slice()
+ var clone2 = arr.slice()
 
+ var arrMinor = clone1.sort(function(a,b) { return(a-b)})
+ arrMinor.pop();
+ console.log(arrMinor)
+ var arrMajor = clone2.sort(function (a,b) { return (b-a)})
+ arrMajor.pop();
+ console.log(arrMajor)
 
+ function getSum(a,b) { return a+b;}
 
+ let result1= arrMinor.reduce(getSum)
+ let result2 = arrMajor.reduce(getSum)
+
+ console.log(`${result1},${result2}`)
+}
