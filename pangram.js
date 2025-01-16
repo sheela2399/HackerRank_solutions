@@ -12,7 +12,7 @@ function pangrams(s) {
         }
     }
     
-    return letterSet.length === 26 ? "pangram" : "not pangram";
+    return letterSet.size === 26 ? "pangram" : "not pangram";
 }
 
 const input = "The quick brown fox jumps over the dog";

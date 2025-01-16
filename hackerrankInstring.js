@@ -17,3 +17,4 @@ function hackerrankInString(s) {
 // Example usage
 console.log(hackerrankInString("hereiamstackerrank")); // Output: "YES"
 console.log(hackerrankInString("hackerworld")); // Output: "NO"
+
