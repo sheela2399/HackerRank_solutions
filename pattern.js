@@ -33,4 +33,25 @@ for (let i=1;i<=5; i++){
 }
 console.log(starr);
 
+// 4 practice
+let s =""
+for(let i=1;i<=5;i++){
+    for(let j=1;j<=5;j++){
+        s += "*"
+    }
+    s += "\n";
+}
+console.log(s);
+
+let ss= ""
+for(let i=5 ;i>=0;i--){
+    ss += "*       "
+    for (let j=1;j<=i;j++){
+         ss += "*"
+    }
+   ss += "\n"
+}
+console.log(ss);
+
+
 
